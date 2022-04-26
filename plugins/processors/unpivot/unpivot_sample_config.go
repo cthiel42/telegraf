@@ -4,5 +4,11 @@
 package unpivot
 
 func (p *Unpivot) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Rotate multi field metric into several single field metrics
+[[processors.unpivot]]
+  ## Tag to use for the name.
+  tag_key = "name"
+  ## Field to use for the name of the value.
+  value_key = "value"
+`
 }

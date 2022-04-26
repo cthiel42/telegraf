@@ -4,5 +4,8 @@
 package linux_sysctl_fs
 
 func (sfs SysctlFS) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Provides Linux sysctl fs metrics
+[[inputs.linux_sysctl_fs]]
+  # no configuration
+`
 }

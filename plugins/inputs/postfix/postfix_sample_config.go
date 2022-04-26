@@ -7,5 +7,10 @@
 package postfix
 
 func (p *Postfix) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Measure postfix queue statistics
+[[inputs.postfix]]
+  ## Postfix queue directory. If not provided, telegraf will try to use
+  ## 'postconf -h queue_directory' to determine it.
+  # queue_directory = "/var/spool/postfix"
+`
 }

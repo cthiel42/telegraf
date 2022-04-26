@@ -4,5 +4,13 @@
 package beanstalkd
 
 func (b *Beanstalkd) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collects Beanstalkd server and tubes stats
+[[inputs.beanstalkd]]
+  ## Server to collect data from
+  server = "localhost:11300"
+
+  ## List of tubes to gather stats about.
+  ## If no tubes specified then data gathered for each tube on server reported by list-tubes command
+  tubes = ["notifications"]
+`
 }

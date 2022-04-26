@@ -4,5 +4,8 @@
 package example
 
 func (m *Example) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# This is an example plugin
+[[inputs.example]]
+  example_option = "example_value"
+`
 }

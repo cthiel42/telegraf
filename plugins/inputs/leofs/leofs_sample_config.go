@@ -4,5 +4,10 @@
 package leofs
 
 func (l *LeoFS) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics from a LeoFS Server via SNMP
+[[inputs.leofs]]
+  ## An array of URLs of the form:
+  ##   host [ ":" port]
+  servers = ["127.0.0.1:4010"]
+`
 }

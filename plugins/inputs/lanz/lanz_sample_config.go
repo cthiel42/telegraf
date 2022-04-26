@@ -4,5 +4,12 @@
 package lanz
 
 func (l *Lanz) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics off Arista LANZ, via socket
+[[inputs.lanz]]
+  ## URL to Arista LANZ endpoint
+  servers = [
+    "tcp://switch1.int.example.com:50001",
+    "tcp://switch2.int.example.com:50001",
+  ]
+`
 }

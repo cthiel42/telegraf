@@ -4,5 +4,9 @@
 package lvm
 
 func (lvm *LVM) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about LVM physical volumes, volume groups, logical volumes.
+[[inputs.lvm]]
+  ## Use sudo to run LVM commands
+  use_sudo = false
+`
 }

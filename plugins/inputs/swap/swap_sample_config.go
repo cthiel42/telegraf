@@ -4,5 +4,8 @@
 package swap
 
 func (ss *SwapStats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about swap memory usage
+[[inputs.swap]]
+  # no configuration
+`
 }

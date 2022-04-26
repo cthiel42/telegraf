@@ -4,5 +4,15 @@
 package override
 
 func (p *Override) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Apply metric modifications using override semantics.
+[[processors.override]]
+  ## All modifications on inputs and aggregators can be overridden:
+  # name_override = "new_name"
+  # name_prefix = "new_name_prefix"
+  # name_suffix = "new_name_suffix"
+
+  ## Tags to be added (all values must be strings)
+  # [processors.override.tags]
+  #   additional_tag = "tag_value"
+`
 }

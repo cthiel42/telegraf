@@ -4,5 +4,9 @@
 package trig
 
 func (s *Trig) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Inserts sine and cosine waves for demonstration purposes
+[[inputs.trig]]
+  ## Set the amplitude
+  amplitude = 10.0
+`
 }

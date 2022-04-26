@@ -4,5 +4,9 @@
 package fail2ban
 
 func (f *Fail2ban) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics from fail2ban.
+[[inputs.fail2ban]]
+  ## Use sudo to run fail2ban-client
+  use_sudo = false
+`
 }

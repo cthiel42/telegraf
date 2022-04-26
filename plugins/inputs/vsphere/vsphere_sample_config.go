@@ -4,5 +4,6 @@
 package vsphere
 
 func (v *VSphere) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `vm_metric_exclude = [ "*" ]
+`
 }

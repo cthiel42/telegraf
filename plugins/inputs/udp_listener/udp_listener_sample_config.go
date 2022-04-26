@@ -4,5 +4,8 @@
 package udp_listener
 
 func (u *UDPListener) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Generic UDP listener
+[[inputs.udp_listener]]
+  # see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener
+`
 }

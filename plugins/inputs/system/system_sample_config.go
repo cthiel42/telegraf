@@ -4,5 +4,8 @@
 package system
 
 func (*SystemStats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about system load & uptime
+[[inputs.system]]
+  # no configuration
+`
 }

@@ -7,5 +7,12 @@
 package nats
 
 func (n *Nats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Provides metrics about the state of a NATS server
+[[inputs.nats]]
+  ## The address of the monitoring endpoint of the NATS server
+  server = "http://localhost:8222"
+
+  ## Maximum time to receive response
+  # response_timeout = "5s"
+`
 }

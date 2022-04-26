@@ -4,5 +4,13 @@
 package disk
 
 func (ds *DiskStats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about disk usage by mount point
+[[inputs.disk]]
+  ## By default stats will be gathered for all mount points.
+  ## Set mount_points will restrict the stats to only the specified mount points.
+  # mount_points = ["/"]
+
+  ## Ignore mount points by filesystem type.
+  ignore_fs = ["tmpfs", "devtmpfs", "devfs", "iso9660", "overlay", "aufs", "squashfs"]
+`
 }

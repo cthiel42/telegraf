@@ -4,5 +4,9 @@
 package dmcache
 
 func (c *DMCache) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Provide a native collection for dmsetup based statistics for dm-cache
+[[inputs.dmcache]]
+  ## Whether to report per-device stats or not
+  per_device = true
+`
 }

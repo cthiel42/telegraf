@@ -4,5 +4,13 @@
 package apcupsd
 
 func (*ApcUpsd) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Monitor APC UPSes connected to apcupsd
+[[inputs.apcupsd]]
+  # A list of running apcupsd server to connect to.
+  # If not provided will default to tcp://127.0.0.1:3551
+  servers = ["tcp://127.0.0.1:3551"]
+
+  ## Timeout for dialing server.
+  timeout = "5s"
+`
 }

@@ -4,5 +4,15 @@
 package openntpd
 
 func (n *Openntpd) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get standard NTP query metrics from OpenNTPD.
+[[inputs.openntpd]]
+  ## Run ntpctl binary with sudo.
+  # use_sudo = false
+
+  ## Location of the ntpctl binary.
+  # binary = "/usr/sbin/ntpctl"
+
+  ## Maximum time the ntpctl binary is allowed to run.
+  # timeout = "5ms"
+`
 }

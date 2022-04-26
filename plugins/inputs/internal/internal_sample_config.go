@@ -4,5 +4,9 @@
 package internal
 
 func (s *Self) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collect statistics about itself
+[[inputs.internal]]
+  ## If true, collect telegraf memory stats.
+  # collect_memstats = true
+`
 }

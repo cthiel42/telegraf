@@ -4,5 +4,8 @@
 package netstat
 
 func (n *NetStats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read TCP metrics such as established, time wait and sockets counts.
+[[inputs.netstat]]
+  # no configuration
+`
 }

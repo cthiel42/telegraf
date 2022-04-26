@@ -4,5 +4,15 @@
 package amon
 
 func (a *Amon) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Configuration for Amon Server to send metrics to.
+[[outputs.amon]]
+  ## Amon Server Key
+  server_key = "my-server-key" # required.
+
+  ## Amon Instance URL
+  amon_instance = "https://youramoninstance" # required
+
+  ## Connection timeout.
+  # timeout = "5s"
+`
 }

@@ -4,5 +4,8 @@
 package infiniband
 
 func (i *Infiniband) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Gets counters from all InfiniBand cards and ports installed
+[[inputs.infiniband]]
+  # no configuration
+`
 }

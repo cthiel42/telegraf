@@ -4,5 +4,15 @@
 package final
 
 func (m *Final) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Report the final metric of a series
+[[aggregators.final]]
+  ## The period on which to flush & clear the aggregator.
+  period = "30s"
+  ## If true, the original metric will be dropped by the
+  ## aggregator and will not get sent to the output plugins.
+  drop_original = false
+
+  ## The time that a series is not updated until considering it final.
+  series_timeout = "5m"
+`
 }

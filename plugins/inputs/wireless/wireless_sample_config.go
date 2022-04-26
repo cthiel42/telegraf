@@ -4,5 +4,10 @@
 package wireless
 
 func (w *Wireless) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Monitor wifi signal strength and quality
+[[inputs.wireless]]
+  ## Sets 'proc' directory path
+  ## If not specified, then default is /proc
+  # host_proc = "/proc"
+`
 }

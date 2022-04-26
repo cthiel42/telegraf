@@ -4,5 +4,8 @@
 package temp
 
 func (t *Temperature) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about temperature
+[[inputs.temp]]
+  # no configuration
+`
 }

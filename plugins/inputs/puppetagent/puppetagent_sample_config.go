@@ -4,5 +4,9 @@
 package puppetagent
 
 func (pa *PuppetAgent) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Reads last_run_summary.yaml file and converts to measurements
+[[inputs.puppetagent]]
+  ## Location of puppet last run summary file
+  location = "/var/lib/puppet/state/last_run_summary.yaml"
+`
 }

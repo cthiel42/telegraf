@@ -4,5 +4,8 @@
 package processes
 
 func (p *Processes) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get the number of processes and group them by status
+[[inputs.processes]]
+  # no configuration
+`
 }

@@ -4,5 +4,12 @@
 package tag_limit
 
 func (d *TagLimit) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Restricts the number of tags that can pass through this filter and chooses which tags to preserve when over the limit.
+[[processors.tag_limit]]
+  ## Maximum number of tags to preserve
+  limit = 3
+
+  ## List of tags to preferentially preserve
+  keep = ["environment", "region"]
+`
 }

@@ -4,5 +4,18 @@
 package minecraft
 
 func (s *Minecraft) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collects scores from a Minecraft server's scoreboard using the RCON protocol
+[[inputs.minecraft]]
+  ## Address of the Minecraft server.
+  # server = "localhost"
+
+  ## Server RCON Port.
+  # port = "25575"
+
+  ## Server RCON Password.
+  password = ""
+
+  ## Uncomment to remove deprecated metric components.
+  # tagdrop = ["server"]
+`
 }

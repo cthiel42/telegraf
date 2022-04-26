@@ -4,5 +4,10 @@
 package merge
 
 func (a *Merge) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Merge metrics into multifield metrics by series key
+[[aggregators.merge]]
+  ## If true, the original metric will be dropped by the
+  ## aggregator and will not get sent to the output plugins.
+  drop_original = true
+`
 }

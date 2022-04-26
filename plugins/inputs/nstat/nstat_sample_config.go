@@ -4,5 +4,15 @@
 package nstat
 
 func (ns *Nstat) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collect kernel snmp counters and network interface statistics
+[[inputs.nstat]]
+  ## file paths for proc files. If empty default paths will be used:
+  ##    /proc/net/netstat, /proc/net/snmp, /proc/net/snmp6
+  ## These can also be overridden with env variables, see README.
+  proc_net_netstat = "/proc/net/netstat"
+  proc_net_snmp = "/proc/net/snmp"
+  proc_net_snmp6 = "/proc/net/snmp6"
+  ## dump metrics with 0 values too
+  dump_zeros       = true
+`
 }

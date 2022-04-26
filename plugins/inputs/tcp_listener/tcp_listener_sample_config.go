@@ -4,5 +4,9 @@
 package tcp_listener
 
 func (t *TCPListener) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Generic TCP listener
+[[inputs.tcp_listener]]
+  # socket_listener plugin
+  # see https://github.com/influxdata/telegraf/tree/master/plugins/inputs/socket_listener
+`
 }

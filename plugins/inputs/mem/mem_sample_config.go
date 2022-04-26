@@ -4,5 +4,8 @@
 package mem
 
 func (ms *MemStats) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics about memory usage
+[[inputs.mem]]
+  # no configuration
+`
 }

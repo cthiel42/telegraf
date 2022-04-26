@@ -4,5 +4,9 @@
 package riak
 
 func (r *Riak) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Read metrics one or many Riak servers
+[[inputs.riak]]
+  # Specify a list of one or more riak http servers
+  servers = ["http://localhost:8098"]
+`
 }

@@ -4,5 +4,12 @@
 package template
 
 func (r *TemplateProcessor) SampleConfig() string {
-	return `{{ .SampleConfig }}`
-}
+	return `# Uses a Go template to create a new tag
+[[processors.template]]
+  ## Tag to set with the output of the template.
+  tag = "topic"
+
+  ## Go template used to create the tag value.  In order to ease TOML
+  ## escaping requirements, you may wish to use single quotes around the
+  ## template string.
+  template = '

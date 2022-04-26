@@ -4,5 +4,15 @@
 package opensmtpd
 
 func (s *Opensmtpd) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# A plugin to collect stats from Opensmtpd - a validating, recursive, and caching DNS resolver
+ [[inputs.opensmtpd]]
+   ## If running as a restricted user you can prepend sudo for additional access:
+   #use_sudo = false
+
+   ## The default location of the smtpctl binary can be overridden with:
+   binary = "/usr/sbin/smtpctl"
+
+   # The default timeout of 1s can be overridden with:
+   #timeout = "1s"
+`
 }

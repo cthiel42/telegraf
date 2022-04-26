@@ -4,5 +4,10 @@
 package wireguard
 
 func (wg *Wireguard) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Collect Wireguard server interface and peer statistics
+[[inputs.wireguard]]
+  ## Optional list of Wireguard device/interface names to query.
+  ## If omitted, all Wireguard interfaces are queried.
+  # devices = ["wg0"]
+`
 }

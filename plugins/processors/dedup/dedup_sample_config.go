@@ -4,5 +4,9 @@
 package dedup
 
 func (d *Dedup) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Filter metrics with repeating field values
+[[processors.dedup]]
+  ## Maximum time to suppress output
+  dedup_interval = "600s"
+`
 }

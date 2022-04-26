@@ -4,5 +4,11 @@
 package pivot
 
 func (p *Pivot) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Rotate a single valued metric into a multi field metric
+[[processors.pivot]]
+  ## Tag to use for naming the new field.
+  tag_key = "name"
+  ## Field to use as the value of the new field.
+  value_key = "value"
+`
 }

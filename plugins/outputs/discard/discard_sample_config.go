@@ -4,5 +4,8 @@
 package discard
 
 func (d *Discard) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Send metrics to nowhere at all
+[[outputs.discard]]
+  # no configuration
+`
 }

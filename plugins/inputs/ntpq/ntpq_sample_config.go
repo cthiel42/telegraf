@@ -4,5 +4,9 @@
 package ntpq
 
 func (n *NTPQ) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get standard NTP query metrics, requires ntpq executable.
+[[inputs.ntpq]]
+  ## If false, set the -n ntpq flag. Can reduce metric gather time.
+  dns_lookup = true
+`
 }

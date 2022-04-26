@@ -4,5 +4,12 @@
 package internet_speed
 
 func (is *InternetSpeed) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Monitors internet speed using speedtest.net service
+[[inputs.internet_speed]]
+  ## Sets if runs file download test
+  # enable_file_download = false
+
+  ## Caches the closest server location
+  # cache = false
+`
 }

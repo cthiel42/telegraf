@@ -4,5 +4,7 @@
 package printer
 
 func (p *Printer) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Print all metrics that pass through this filter.
+[[processors.printer]]
+`
 }

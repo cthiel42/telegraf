@@ -4,5 +4,8 @@
 package synproxy
 
 func (k *Synproxy) SampleConfig() string {
-	return `{{ .SampleConfig }}`
+	return `# Get synproxy counter statistics from procfs
+[[inputs.synproxy]]
+  # no configuration
+`
 }
