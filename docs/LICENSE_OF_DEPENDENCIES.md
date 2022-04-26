@@ -12,13 +12,21 @@ following works:
 - github.com/Azure/azure-pipeline-go [MIT License](https://github.com/Azure/azure-pipeline-go/blob/master/LICENSE)
 - github.com/Azure/azure-sdk-for-go [Apache License 2.0](https://github.com/Azure/azure-sdk-for-go/blob/master/LICENSE)
 - github.com/Azure/azure-sdk-for-go/sdk/azcore [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/azcore/LICENSE.txt)
+<<<<<<< HEAD
 - github.com/Azure/azure-sdk-for-go/sdk/internal [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/internal/LICENSE.txt)
 - github.com/Azure/azure-sdk-for-go/sdk/storage/azblob [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/storage/azblob/LICENSE.txt)
+=======
+- github.com/Azure/azure-sdk-for-go/sdk/azidentity [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/azidentity/LICENSE.txt)
+- github.com/Azure/azure-sdk-for-go/sdk/internal [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/internal/LICENSE.txt)
+- github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/monitor/armmonitor [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/resourcemanager/monitor/armmonitor/LICENSE.txt)
+- github.com/Azure/azure-sdk-for-go/sdk/resourcemanager/resources/armresources [MIT License](https://github.com/Azure/azure-sdk-for-go/blob/main/sdk/resourcemanager/resources/armresources/LICENSE.txt)
+>>>>>>> 0904890050db499d6aa7c62129300e429108cefa
 - github.com/Azure/azure-storage-blob-go [MIT License](https://github.com/Azure/azure-storage-blob-go/blob/master/LICENSE)
 - github.com/Azure/azure-storage-queue-go [MIT License](https://github.com/Azure/azure-storage-queue-go/blob/master/LICENSE)
 - github.com/Azure/go-amqp [MIT License](https://github.com/Azure/go-amqp/blob/master/LICENSE)
 - github.com/Azure/go-autorest [Apache License 2.0](https://github.com/Azure/go-autorest/blob/master/LICENSE)
 - github.com/Azure/go-ntlmssp [MIT License](https://github.com/Azure/go-ntlmssp/blob/master/LICENSE)
+- github.com/AzureAD/microsoft-authentication-library-for-go [MIT License](https://github.com/AzureAD/microsoft-authentication-library-for-go/blob/dev/LICENSE)
 - github.com/ClickHouse/clickhouse-go [MIT License](https://github.com/ClickHouse/clickhouse-go/blob/master/LICENSE)
 - github.com/Mellanox/rdmamap [Apache License 2.0](https://github.com/Mellanox/rdmamap/blob/master/LICENSE)
 - github.com/Microsoft/go-winio [MIT License](https://github.com/Microsoft/go-winio/blob/master/LICENSE)
