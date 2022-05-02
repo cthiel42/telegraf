@@ -262,7 +262,7 @@ func createMetricName(metric *armmonitor.Metric, response *armmonitor.MetricsCli
 }
 
 func getMetricFields(metricValues []*armmonitor.MetricValue) map[string]interface{} {
-	for index := len(metricValues) - 1; index >= 0; index-- {
+	for index := len(metricValues) - 2; index >= 0; index-- {
 		metricFields := getMetricsClientMetricValueFields(metricValues[index])
 		if metricFields == nil {
 			continue
